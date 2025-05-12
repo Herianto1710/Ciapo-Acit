@@ -1,0 +1,79 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffaf4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Container utama */
+.biografi-container {
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul utama */
+.biografi-container h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #b45309;
+  margin-bottom: 20px;
+}
+
+/* Paragraf isi */
+.biografi-container p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+/* Teks penekanan */
+.biografi-container em {
+  font-style: italic;
+  font-weight: bold;
+  color: #d97706;
+}
+
+/* Responsif di perangkat kecil */
+@media (max-width: 600px) {
+  .biografi-container {
+    padding: 20px;
+  }
+
+  .biografi-container h1 {
+    font-size: 1.5em;
+  }
+
+  .biografi-container p {
+    font-size: 1em;
+  }
+
+  .pesan-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#pesanBtn {
+  background-color: #f97316;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#pesanBtn:hover {
+  background-color: #ea580c;
+}
