@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciapo Acit - Usaha Kuliner</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #ff5f5f;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .biografi-container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .biografi-container h1 {
+      color: #cc0000;
+    }
+    .pesan-button-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    #pesanBtn {
+      background-color: #ff5f5f;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #pesanBtn:hover {
+      background-color: #e04c4c;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    .popup-content button {
+      margin-top: 1rem;
+      background-color: #ff5f5f;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .kontak-form {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: #fff3f3;
+      border-radius: 10px;
+    }
+    .kontak-form input, .kontak-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .kontak-form button {
+      background-color: #cc0000;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ciapo Acit</h1>
+    <p>Solusi kuliner harian Anda!</p>
+  </header>
+
+  <section class="biografi-container">
+    <h1>Tentang Kami</h1>
+    <p><strong>Ciapo Acit</strong> adalah usaha kuliner yang menyediakan berbagai makanan dan minuman lezat setiap hari.</p>
+    <p>Kami menerima pesanan untuk segala kebutuhan konsumsi Anda. Dijamin puas dengan layanan dan rasa kami!</p>
+    <p><em>Jangan ragu, ayo pesan sekarang!</em></p>
+  </section>
+
+  <div class="pesan-button-container">
+    <button id="pesanBtn">Pesan Sekarang</button>
+  </div>
+
+  <div class="popup" id="popupPesan">
+    <div class="popup-content">
+      <p>Terima kasih! Tim kami akan segera menghubungi Anda melalui WhatsApp.</p>
+      <button onclick="tutupPopup()">Tutup</button>
+    </div>
+  </div>
+
+  <section class="kontak-form">
+    <h2>Formulir Pemesanan</h2>
+    <input type="text" placeholder="Nama Anda" required>
+    <input type="tel" placeholder="Nomor WhatsApp" required>
+    <textarea rows="4" placeholder="Pesanan Anda..."></textarea>
+    <button>Kirim Pesanan</button>
+  </section>
+
+  <script>
+    document.getElementById("pesanBtn").addEventListener("click", function() {
+      document.getElementById("popupPesan").style.display = "flex";
+    });
+    function tutupPopup() {
+      document.getElementById("popupPesan").style.display = "none";
+    }
+  </script>
+</body>
+</html>
